@@ -476,27 +476,61 @@ export default function App() {
               </div>
 
               <FadeIn delay={0.15}>
-                <div className="flex flex-col gap-6 mb-24">
-                  <a
-                    href="https://www.linkedin.com/in/abhinav-verma-65b641248/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="contact-link"
-                  >
-                    LinkedIn →
-                  </a>
-                  <a
-                    href="https://github.com/AbhinavVerma13"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="contact-link"
-                  >
-                    GitHub →
-                  </a>
-                  <a href="mailto:1217abinav@gmail.com" className="contact-link">
-                    Email →
-                  </a>
-                </div>
+                <form
+                  className="contact-form mb-16"
+                  action="https://formsubmit.co/1217abinav@gmail.com"
+                  method="POST"
+                >
+                  {/* Honeypot & disable captcha */}
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="https://abhinavverma.dev/thanks" />
+
+                  <h3>Connect with me.</h3>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label className="form-label">First Name</label>
+                      <input type="text" name="first_name" className="form-input" placeholder="Abhinav" required />
+                    </div>
+                    <div className="form-group">
+                      <label className="form-label">Last Name</label>
+                      <input type="text" name="last_name" className="form-input" placeholder="Verma" />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Email Address</label>
+                    <input type="email" name="email" className="form-input" placeholder="you@example.com" required />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Subject</label>
+                    <input type="text" name="subject" className="form-input" placeholder="Greetings" />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Message</label>
+                    <textarea name="message" className="form-input" placeholder="Hey there!" required />
+                  </div>
+
+                  <div className="flex flex-wrap items-center justify-between gap-6">
+                    <button type="submit" className="send-btn">
+                      Send ✉
+                    </button>
+
+                    <div className="social-icons">
+                      <a href="https://www.linkedin.com/in/abhinav-verma-65b641248/" target="_blank" rel="noreferrer" className="social-icon" title="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                      </a>
+                      <a href="https://github.com/AbhinavVerma13" target="_blank" rel="noreferrer" className="social-icon" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+                      </a>
+                      <a href="mailto:1217abinav@gmail.com" className="social-icon" title="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                </form>
               </FadeIn>
 
               <FadeIn delay={0.3}>
@@ -506,7 +540,7 @@ export default function App() {
                   style={{ fontSize: '10px', letterSpacing: '2.5px', textTransform: 'uppercase', color: 'var(--text-muted)' }}
                 >
                   <span>© 2026 Abhinav Verma</span>
-                  <span>Crafted with AI</span>
+                  <span>Made with ❤️ in India</span>
                 </div>
               </FadeIn>
             </div>
