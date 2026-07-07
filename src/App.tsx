@@ -478,12 +478,10 @@ export default function App() {
               <FadeIn delay={0.15}>
                 <form
                   className="contact-form mb-16"
-                  action="https://formsubmit.co/1217abinav@gmail.com"
+                  action="https://formspree.io/f/xrewvbzl"
                   method="POST"
                 >
-                  {/* Honeypot & disable captcha */}
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://abhinavverma.dev/thanks" />
+                  <input type="hidden" name="_next" value="https://my-portfolio-tau-ten-2hdwdgosle.vercel.app/" />
 
                   <h3>Connect with me.</h3>
 
