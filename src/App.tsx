@@ -452,12 +452,37 @@ export default function App() {
                 </FadeIn>
 
                 <FadeIn delay={0.3}>
-                  <div>
-                    <p className="section-label mb-6">Tech Stack</p>
-                    <div className="flex flex-wrap gap-3">
-                      {skills.map((skill) => (
-                        <span key={skill} className="skill-pill">{skill}</span>
-                      ))}
+                  <div className="flex flex-col gap-10">
+                    <div>
+                      <p className="section-label mb-6">Tech Stack</p>
+                      <div className="flex flex-wrap gap-3">
+                        {skills.map((skill) => (
+                          <span key={skill} className="skill-pill">{skill}</span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <p className="section-label mb-6">Education</p>
+                      <div className="space-y-6">
+                        <div className="relative pl-6 border-l border-black/10 dark:border-white/10">
+                          <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-[var(--accent)]" />
+                          <h4 className="text-sm font-semibold text-[var(--text)]">Class XII (Senior Secondary)</h4>
+                          <p className="text-xs text-[var(--text-muted)] mt-1">Central Academy Senior Secondary School</p>
+                          <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 text-[var(--text-muted)] rounded">
+                            CBSE Board
+                          </span>
+                        </div>
+
+                        <div className="relative pl-6 border-l border-black/10 dark:border-white/10">
+                          <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-[var(--accent)]" />
+                          <h4 className="text-sm font-semibold text-[var(--text)]">Class X (Secondary)</h4>
+                          <p className="text-xs text-[var(--text-muted)] mt-1">Central Academy Senior Secondary School</p>
+                          <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 text-[var(--text-muted)] rounded">
+                            CBSE Board
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </FadeIn>
