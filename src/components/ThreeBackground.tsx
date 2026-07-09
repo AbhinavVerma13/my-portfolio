@@ -186,6 +186,9 @@ export const ThreeBackground: React.FC = () => {
         positionsArray[i3 + 1] = y;
         positionsArray[i3 + 2] = z;
 
+        // Dynamic particle sizing based on theme
+        material.size = isDark ? 2.2 : 2.8;
+
         // Apply Colors depending on active Theme
         if (isDark) {
           // Glow gold / amber / cosmic purple HSL gradients
@@ -194,10 +197,10 @@ export const ThreeBackground: React.FC = () => {
           const light = 0.45 + Math.sin(time * 2 + ratio * 10) * 0.15; // Twinkle effect
           tempColor.setHSL(hue, sat, light);
         } else {
-          // Sophisticated bronze / terracotta / terracotta slate
-          const hue = (0.05 + ratio * 0.06) % 1.0; // Warm terracotta tones
-          const sat = 0.65;
-          const light = 0.35 + Math.cos(time + ratio * 5) * 0.1;
+          // Vibrant Indigo-Teal gradient for high contrast in light mode
+          const hue = (0.55 + ratio * 0.15) % 1.0; // Indigo (0.55) to Teal/Cyan (0.7)
+          const sat = 0.85;
+          const light = 0.45 + Math.cos(time * 1.5 + ratio * 6) * 0.08;
           tempColor.setHSL(hue, sat, light);
         }
 
