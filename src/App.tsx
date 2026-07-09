@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { ThreeBackground } from './components/ThreeBackground';
 import './index.css';
 
 /* ═══════════════════════════════════════════════════
@@ -282,6 +283,7 @@ export default function App() {
         <>
           {/* Ambient gradient orbs */}
           <GradientOrbs />
+          <ThreeBackground />
 
           {/* Bottom nav dock */}
           <FloatingNav active={activeSection} onNav={scrollTo} />
