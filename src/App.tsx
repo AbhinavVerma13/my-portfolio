@@ -467,6 +467,15 @@ export default function App() {
                       <div className="space-y-6">
                         <div className="relative pl-6 border-l border-black/10 dark:border-white/10">
                           <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-[var(--accent)]" />
+                          <h4 className="text-sm font-semibold text-[var(--text)]">Bachelor of Technology (B.Tech)</h4>
+                          <p className="text-xs text-[var(--text-muted)] mt-1">Shri Ramswaroop Memorial College of Engineering and Management (SRMCEM)</p>
+                          <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 text-[var(--text-muted)] rounded">
+                            AKTU Affiliated
+                          </span>
+                        </div>
+
+                        <div className="relative pl-6 border-l border-black/10 dark:border-white/10">
+                          <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-[var(--accent)]" />
                           <h4 className="text-sm font-semibold text-[var(--text)]">Class XII (Senior Secondary)</h4>
                           <p className="text-xs text-[var(--text-muted)] mt-1">Central Academy Senior Secondary School</p>
                           <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 text-[var(--text-muted)] rounded">
