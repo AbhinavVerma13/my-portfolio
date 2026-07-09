@@ -192,10 +192,10 @@ const projects = [
     url: 'https://ai-startup-agent-0jge.onrender.com/',
   },
   {
-    title: 'WhatsApp Agent',
-    label: 'Local Automation',
-    desc: 'A locally-hosted AI chatbot that automates WhatsApp conversations — handles queries, schedules messages, and runs custom workflows on autopilot.',
-    image: '/whatsapp_agent_mockup.png',
+    title: 'AI Digital Twin',
+    label: 'Autonomous Persona',
+    desc: 'An autonomous clone of my professional persona built to interact with recruiters and visitors 24/7. It screens client inquiries, answers technical questions about my skills, and showcases my portfolio on autopilot.',
+    image: '/ai_digital_twin_mockup.png',
     url: '#',
   },
   {
@@ -204,6 +204,13 @@ const projects = [
     desc: 'A full clone of my college website enhanced with an AI chatbot & voice agent — students get A-to-Z info about admissions, courses, fees, placements, and hostels instantly instead of searching endlessly.',
     image: '/srmcem_helpdesk_mockup.png',
     url: 'https://srmcem-frontend-production.up.railway.app/',
+  },
+  {
+    title: 'WhatsApp Travel Agent',
+    label: 'Automated Travel Planner',
+    desc: 'A smart WhatsApp travel planner. Message it with `#plan` to instantly get a complete itinerary including flight availability, budget estimates, destination suggestions, and local weather.',
+    image: '/whatsapp_travel_agent_mockup.png',
+    url: '#',
   },
 ];
 
@@ -366,10 +373,10 @@ export default function App() {
                       href={project.url}
                       target="_blank"
                       rel="noreferrer"
-                      className={`project-card block ${i === 0 ? 'md:col-span-2' : ''}`}
+                      className="project-card block"
                     >
                       <div className="overflow-hidden">
-                        <img src={project.image} alt={project.title} style={i === 0 ? { height: '360px' } : undefined} />
+                        <img src={project.image} alt={project.title} />
                       </div>
                       <div className="card-body">
                         <div className="card-label">{project.label}</div>
