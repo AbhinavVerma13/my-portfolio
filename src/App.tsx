@@ -166,9 +166,9 @@ export default function App() {
         </FadeIn>
 
         {/* Hero Heading */}
-        <div className="relative w-full flex items-center justify-center overflow-hidden flex-grow select-none">
-          <FadeIn delay={0.15} y={40} className="w-full text-center relative z-20">
-            <h1 className="hero-heading text-[10vw] sm:text-[11vw] md:text-[12vw] lg:text-[13.5vw] font-black uppercase tracking-tight leading-none w-full mt-6 sm:mt-4 md:-mt-5">
+        <div className="relative w-full flex flex-col items-center justify-start overflow-hidden flex-grow select-none">
+          <FadeIn delay={0.15} y={40} className="w-full text-center relative z-20 mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+            <h1 className="hero-heading text-[8vw] sm:text-[8.5vw] md:text-[9vw] lg:text-[9vw] font-black uppercase tracking-tight leading-none w-full">
               Hi, i&apos;m abhinav verma
             </h1>
           </FadeIn>
