@@ -195,9 +195,9 @@ export default function App() {
           <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-10 bottom-[-20px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-[-80px]">
             <Magnet padding={150} strength={3} className="cursor-pointer">
               <img
-                src="/no_earring_portrait.jpg"
+                src="/no_earring_portrait.png"
                 alt="Abhinav Portrait"
-                className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] lg:max-h-[65vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none mix-blend-screen"
+                className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] lg:max-h-[65vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
               />
             </Magnet>
           </FadeIn>
