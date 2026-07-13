@@ -115,10 +115,10 @@ const projectsData = [
     num: '05',
     category: 'AI/ML Verification',
     name: 'Fake News Detector',
-    url: '#',
-    col1Img1: '/fake_news_mockup.png',
-    col1Img2: '/fake_news_mockup.png',
-    col2Img: '/fake_news_mockup.png',
+    url: 'https://abhinavverma13.github.io/Fake-News-Detector/',
+    col1Img1: '/veritas_media_1.png',
+    col1Img2: '/veritas_media_2.png',
+    col2Img: '/veritas_media_3.png',
   },
 ];
 
@@ -282,27 +282,27 @@ export default function App() {
                 <div className="absolute -left-[21px] top-1 w-[9px] h-[9px] rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)]" />
                 <h4 className="text-sm font-semibold text-white">Bachelor of Technology (B.Tech)</h4>
                 <p className="text-xs text-[#D7E2EA]/70 mt-1">Shri Ramswaroop Memorial College of Engineering and Management (SRMCEM)</p>
-                <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-[#D7E2EA]/10 bg-white/5 text-[#D7E2EA]/60 rounded">
-                  AKTU Affiliated
-                </span>
+                <p className="text-[11px] text-[#D7E2EA]/50 mt-1.5 font-light">
+                  Affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow.
+                </p>
               </div>
 
               <div className="relative pl-6">
                 <div className="absolute -left-[21px] top-1 w-[9px] h-[9px] rounded-full bg-[#D7E2EA]/30" />
                 <h4 className="text-sm font-semibold text-white">Class XII (Senior Secondary)</h4>
                 <p className="text-xs text-[#D7E2EA]/70 mt-1">Central Academy Senior Secondary School</p>
-                <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-[#D7E2EA]/10 bg-white/5 text-[#D7E2EA]/60 rounded">
-                  CBSE Board
-                </span>
+                <p className="text-[11px] text-[#D7E2EA]/50 mt-1.5 font-light">
+                  Completed under the Central Board of Secondary Education (CBSE) Board.
+                </p>
               </div>
 
               <div className="relative pl-6">
                 <div className="absolute -left-[21px] top-1 w-[9px] h-[9px] rounded-full bg-[#D7E2EA]/30" />
                 <h4 className="text-sm font-semibold text-white">Class X (Secondary)</h4>
                 <p className="text-xs text-[#D7E2EA]/70 mt-1">Central Academy Senior Secondary School</p>
-                <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-[#D7E2EA]/10 bg-white/5 text-[#D7E2EA]/60 rounded">
-                  CBSE Board
-                </span>
+                <p className="text-[11px] text-[#D7E2EA]/50 mt-1.5 font-light">
+                  Completed under the Central Board of Secondary Education (CBSE) Board.
+                </p>
               </div>
             </div>
           </FadeIn>
