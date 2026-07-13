@@ -137,7 +137,7 @@ export default function App() {
       <ThreeBackground />
 
       {/* ════════════ 1. HERO SECTION ════════════ */}
-      <section id="hero" className="relative h-screen flex flex-col justify-between overflow-hidden z-20">
+      <section id="hero" className="relative h-screen flex flex-col justify-between overflow-hidden z-20 bg-black">
         {/* Navbar */}
         <FadeIn delay={0} y={-20} className="w-full">
           <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 relative z-50">
@@ -195,7 +195,7 @@ export default function App() {
           <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-10 bottom-[-20px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-[-80px]">
             <Magnet padding={150} strength={3} className="cursor-pointer">
               <img
-                src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
+                src="/no_earring_portrait.jpg"
                 alt="Abhinav Portrait"
                 className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] lg:max-h-[65vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
               />
@@ -266,7 +266,7 @@ export default function App() {
           {/* Character-reveal scrolling bio paragraph */}
           <div className="max-w-[560px]">
             <AnimatedText
-              text="With more than five years of experience in design and automation, i focus on ai agents, custom workflows, and backend systems, i truly enjoy working with businesses that aim to stand out and automate their processes. Let's build something incredible together!"
+              text="I'm Abhinav Verma — based in India, deeply passionate about AI and automation. I build AI agents that solve real problems: from a startup builder platform to a college helpdesk chatbot to a WhatsApp automation assistant. I'm not just building — I'm constantly learning. Let's build something incredible together!"
               className="font-medium text-[#D7E2EA] leading-relaxed text-center"
               style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
             />
