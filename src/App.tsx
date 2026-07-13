@@ -89,9 +89,9 @@ const projectsData = [
     category: 'Autonomous Persona',
     name: 'AI Digital Twin',
     url: '#',
-    col1Img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
-    col1Img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
-    col2Img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
+    col1Img1: '/ai_digital_twin_mockup.png',
+    col1Img2: '/ai_digital_twin_mockup.png',
+    col2Img: '/ai_digital_twin_mockup.png',
   },
   {
     num: '03',
@@ -107,9 +107,9 @@ const projectsData = [
     category: 'Automated Travel Planner',
     name: 'WhatsApp Travel Agent',
     url: '#',
-    col1Img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-    col1Img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-    col2Img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+    col1Img1: '/whatsapp_travel_agent_mockup.png',
+    col1Img2: '/whatsapp_travel_agent_mockup.png',
+    col2Img: '/whatsapp_travel_agent_mockup.png',
   },
   {
     num: '05',
@@ -137,7 +137,7 @@ export default function App() {
       <ThreeBackground />
 
       {/* ════════════ 1. HERO SECTION ════════════ */}
-      <section id="hero" className="relative h-screen flex flex-col justify-between overflow-hidden z-20 bg-black">
+      <section id="hero" className="relative h-screen flex flex-col justify-between overflow-hidden z-20">
         {/* Navbar */}
         <FadeIn delay={0} y={-20} className="w-full">
           <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 relative z-50">
@@ -197,7 +197,7 @@ export default function App() {
               <img
                 src="/no_earring_portrait.jpg"
                 alt="Abhinav Portrait"
-                className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] lg:max-h-[65vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
+                className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] lg:max-h-[65vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none mix-blend-screen"
               />
             </Magnet>
           </FadeIn>
@@ -224,33 +224,41 @@ export default function App() {
       <section id="about" className="relative min-h-screen flex flex-col justify-center items-center px-5 sm:px-8 md:px-10 py-20 bg-[#0C0C0C] overflow-hidden z-20">
         {/* Decorative 3D Corner assets */}
         <FadeIn delay={0.1} x={-80} y={0} duration={0.9} className="absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] z-10">
-          <img
+          <motion.img
             src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
             alt="Moon 3D icon"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
             className="w-[120px] sm:w-[160px] md:w-[210px] h-auto pointer-events-none select-none opacity-80"
           />
         </FadeIn>
 
         <FadeIn delay={0.25} x={-80} y={0} duration={0.9} className="absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] z-10">
-          <img
+          <motion.img
             src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
             alt="Swirl 3D object"
+            animate={{ rotate: -360 }}
+            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
             className="w-[100px] sm:w-[140px] md:w-[180px] h-auto pointer-events-none select-none opacity-80"
           />
         </FadeIn>
 
         <FadeIn delay={0.15} x={80} y={0} duration={0.9} className="absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] z-10">
-          <img
+          <motion.img
             src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
             alt="Lego 3D icon"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
             className="w-[120px] sm:w-[160px] md:w-[210px] h-auto pointer-events-none select-none opacity-80"
           />
         </FadeIn>
 
         <FadeIn delay={0.3} x={80} y={0} duration={0.9} className="absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] z-10">
-          <img
+          <motion.img
             src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
             alt="Group 3D object"
+            animate={{ rotate: -360 }}
+            transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
             className="w-[130px] sm:w-[170px] md:w-[220px] h-auto pointer-events-none select-none opacity-80"
           />
         </FadeIn>
