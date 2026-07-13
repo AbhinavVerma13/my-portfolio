@@ -167,14 +167,14 @@ export default function App() {
 
         {/* Hero Heading */}
         <div className="relative w-full flex flex-col items-center justify-start overflow-hidden flex-grow select-none">
-          <FadeIn delay={0.15} y={40} className="w-full text-center relative z-20 mt-12 sm:mt-16 md:mt-20 lg:mt-24">
-            <h1 className="hero-heading text-[8vw] sm:text-[8.5vw] md:text-[9vw] lg:text-[9vw] font-black uppercase tracking-tight leading-none w-full">
+          <FadeIn delay={0.15} y={40} className="w-full text-center relative z-20 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
+            <h1 className="hero-heading text-[6.5vw] sm:text-[7vw] md:text-[7.5vw] lg:text-[8vw] font-black uppercase tracking-tight leading-none w-full whitespace-nowrap">
               Hi, i&apos;m abhinav verma
             </h1>
           </FadeIn>
 
           {/* Hero Portrait absolutely centered over text */}
-          <FadeIn delay={0.6} y={30} className="absolute inset-0 m-auto w-fit h-fit z-10 sm:top-auto sm:bottom-0 sm:my-0">
+          <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-10 bottom-[-40px] sm:bottom-[-80px] md:bottom-[-120px] lg:bottom-[-160px]">
             <Magnet padding={150} strength={3} className="cursor-pointer">
               <img
                 src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
