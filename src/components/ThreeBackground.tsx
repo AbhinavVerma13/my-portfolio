@@ -180,6 +180,13 @@ export const ThreeBackground: React.FC = () => {
             y += (dy / dist) * pullForce;
           }
         }
+        // Smooth Center Repulsion to keep the face portrait completely clear of overlapping particles
+        const distCenter = Math.sqrt(x * x + y * y) + 0.001;
+        if (distCenter < 170) {
+          const pushForce = (170 - distCenter) * 0.9;
+          x += (x / distCenter) * pushForce;
+          y += (y / distCenter) * pushForce;
+        }
 
         // Apply updated positions
         positionsArray[i3] = x;

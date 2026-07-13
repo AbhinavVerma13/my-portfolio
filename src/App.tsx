@@ -192,7 +192,7 @@ export default function App() {
           </FadeIn>
 
           {/* Hero Portrait absolutely centered over text */}
-          <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-10 bottom-[-20px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-[-80px]">
+          <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-30 bottom-[-20px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-[-80px]">
             <Magnet padding={150} strength={3} className="cursor-pointer">
               <img
                 src="/no_earring_portrait.png"
