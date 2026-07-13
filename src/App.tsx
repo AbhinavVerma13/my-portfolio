@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Mail, Linkedin, Github, Menu, X } from 'lucide-react';
+import './index.css';
 import {
   ContactButton,
   LiveProjectButton,
