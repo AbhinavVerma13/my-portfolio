@@ -166,7 +166,7 @@ export default function App() {
         </FadeIn>
 
         {/* Hero Heading */}
-        <div className="relative w-full flex flex-col items-center justify-start overflow-hidden flex-grow select-none">
+        <div className="relative w-full flex flex-col items-center justify-start flex-grow select-none">
           <FadeIn delay={0.15} y={40} className="w-full text-center relative z-20 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
             <h1 className="hero-heading text-[6.5vw] sm:text-[7vw] md:text-[7.5vw] lg:text-[8vw] font-black uppercase tracking-tight leading-none w-full whitespace-nowrap">
               Hi, i&apos;m abhinav verma
@@ -174,12 +174,12 @@ export default function App() {
           </FadeIn>
 
           {/* Hero Portrait absolutely centered over text */}
-          <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-10 bottom-[-40px] sm:bottom-[-80px] md:bottom-[-120px] lg:bottom-[-160px]">
+          <FadeIn delay={0.6} y={30} className="absolute left-0 right-0 mx-auto w-fit z-10 bottom-[-20px] sm:bottom-[-40px] md:bottom-[-60px] lg:bottom-[-80px]">
             <Magnet padding={150} strength={3} className="cursor-pointer">
               <img
                 src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
                 alt="Abhinav Portrait"
-                className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] lg:max-h-[70vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
+                className="w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] lg:max-h-[65vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
               />
             </Magnet>
           </FadeIn>
