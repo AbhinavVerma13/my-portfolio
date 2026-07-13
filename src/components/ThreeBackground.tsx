@@ -17,7 +17,7 @@ export const ThreeBackground: React.FC = () => {
   const [scale, setScale] = useState(180);
   const [chaos, setChaos] = useState(35);
   const [morph, setMorph] = useState(1.0);
-  const [showHUD, setShowHUD] = useState(true);
+  const [showHUD, setShowHUD] = useState(false);
 
   // Sync state to refs
   useEffect(() => {
@@ -265,7 +265,7 @@ export const ThreeBackground: React.FC = () => {
       {/* Glassmorphic Interactive Swarm Controls HUD */}
       {showHUD && (
         <div 
-          className="fixed bottom-28 left-6 z-50 max-w-xs w-72 rounded-2xl p-5 border border-black/5 dark:border-white/5 bg-white/70 dark:bg-[#141210]/70 backdrop-blur-xl shadow-xl transition-all duration-300"
+          className="fixed top-24 left-6 z-50 max-w-xs w-72 rounded-2xl p-5 border border-black/5 dark:border-white/5 bg-white/70 dark:bg-[#141210]/70 backdrop-blur-xl shadow-xl transition-all duration-300"
           style={{ pointerEvents: 'auto' }}
         >
           <div className="flex items-center justify-between mb-3 border-b border-black/5 dark:border-white/5 pb-2">
@@ -358,7 +358,7 @@ export const ThreeBackground: React.FC = () => {
       {!showHUD && (
         <button
           onClick={() => setShowHUD(true)}
-          className="fixed bottom-28 left-6 z-50 py-2 px-3 rounded-full border border-black/5 dark:border-white/5 bg-white/70 dark:bg-[#141210]/70 backdrop-blur-xl text-[10px] uppercase font-mono tracking-widest text-[var(--accent)] shadow-lg hover:border-[var(--accent)] transition-all"
+          className="fixed top-24 left-6 z-50 py-2 px-3 rounded-full border border-black/5 dark:border-white/5 bg-white/70 dark:bg-[#141210]/70 backdrop-blur-xl text-[10px] uppercase font-mono tracking-widest text-[var(--accent)] shadow-lg hover:border-[var(--accent)] transition-all"
           style={{ pointerEvents: 'auto' }}
         >
           ⚙️ Swarm Engine

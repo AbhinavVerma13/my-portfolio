@@ -174,12 +174,12 @@ export default function App() {
           </FadeIn>
 
           {/* Hero Portrait absolutely centered over text */}
-          <FadeIn delay={0.6} y={30} className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0">
+          <FadeIn delay={0.6} y={30} className="absolute inset-0 m-auto w-fit h-fit z-10 sm:top-auto sm:bottom-0 sm:my-0">
             <Magnet padding={150} strength={3} className="cursor-pointer">
               <img
                 src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
                 alt="Abhinav Portrait"
-                className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
+                className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] max-h-[50vh] sm:max-h-[60vh] md:max-h-[65vh] lg:max-h-[70vh] h-auto object-contain pointer-events-none drop-shadow-2xl select-none"
               />
             </Magnet>
           </FadeIn>
