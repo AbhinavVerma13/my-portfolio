@@ -77,7 +77,7 @@ const services = [
 const projectsData = [
   {
     num: '01',
-    category: 'Client Project',
+    category: 'Autonomous Builder',
     name: 'AI Startup Agent',
     url: 'https://ai-startup-agent-0jge.onrender.com/',
     col1Img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
@@ -86,7 +86,7 @@ const projectsData = [
   },
   {
     num: '02',
-    category: 'Personal Project',
+    category: 'Autonomous Persona',
     name: 'AI Digital Twin',
     url: '#',
     col1Img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
@@ -95,12 +95,30 @@ const projectsData = [
   },
   {
     num: '03',
-    category: 'Client Project',
+    category: 'College AI Assistant',
+    name: 'SRMCEM AI Helpdesk',
+    url: 'https://srmcem-frontend-production.up.railway.app/',
+    col1Img1: '/srmcem_helpdesk_mockup.png',
+    col1Img2: '/srmcem_helpdesk_mockup.png',
+    col2Img: '/srmcem_helpdesk_mockup.png',
+  },
+  {
+    num: '04',
+    category: 'Automated Travel Planner',
     name: 'WhatsApp Travel Agent',
     url: '#',
     col1Img1: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
     col1Img2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
     col2Img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+  },
+  {
+    num: '05',
+    category: 'AI/ML Verification',
+    name: 'Fake News Detector',
+    url: '#',
+    col1Img1: '/fake_news_mockup.png',
+    col1Img2: '/fake_news_mockup.png',
+    col2Img: '/fake_news_mockup.png',
   },
 ];
 
@@ -168,7 +186,7 @@ export default function App() {
         {/* Hero Heading */}
         <div className="relative w-full flex flex-col items-center justify-start flex-grow select-none">
           <FadeIn delay={0.15} y={40} className="w-full text-center relative z-20 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
-            <h1 className="hero-heading text-[6.5vw] sm:text-[7vw] md:text-[7.5vw] lg:text-[8vw] font-black uppercase tracking-tight leading-none w-full whitespace-nowrap">
+            <h1 className="hero-heading text-[5vw] sm:text-[5.5vw] md:text-[6vw] lg:text-[6.5vw] font-black uppercase tracking-tight leading-none w-full whitespace-nowrap">
               Hi, i&apos;m abhinav verma
             </h1>
           </FadeIn>
