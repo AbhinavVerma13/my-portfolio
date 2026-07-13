@@ -8,52 +8,68 @@ interface LogLine {
 
 interface AgentData {
   title: string;
+  label: string;
   logs: LogLine[];
 }
 
+type AgentKey = 'whatsapp' | 'startup' | 'helpdesk' | 'twin';
+
 export const AgentConsole: React.FC = () => {
-  const [activeAgent, setActiveAgent] = useState<'whatsapp' | 'scraper' | 'optimizer'>('whatsapp');
+  const [activeAgent, setActiveAgent] = useState<AgentKey>('whatsapp');
   const [printedLogs, setPrintedLogs] = useState<LogLine[]>([]);
   const screenRef = useRef<HTMLDivElement>(null);
   
-  const agents: Record<'whatsapp' | 'scraper' | 'optimizer', AgentData> = {
+  const agents: Record<AgentKey, AgentData> = {
     whatsapp: {
-      title: '> WHATSAPP_MONITOR_AGENT // ACTIVE',
+      title: '> WHATSAPP_TRAVEL_AGENT // ACTIVE',
+      label: 'WhatsApp Travel Agent',
       logs: [
-        { type: 'system', text: '[SYSTEM] Initializing WhatsApp Monitor...' },
-        { type: 'system', text: '[SYSTEM] Checking credentials on localhost:3000...' },
-        { type: 'success', text: '[SUCCESS] WhatsApp session connected successfully.' },
-        { type: 'info', text: '[LISTENING] Awaiting incoming webhook messages...' },
-        { type: 'incoming', text: '[INCOMING] Message from +91-98765-43210: ".ask What is the status of agent 2?"' },
-        { type: 'processing', text: '[AGENT] Forwarding query to OpenAI system prompt context...' },
-        { type: 'outgoing', text: '[OUTGOING] Reply sent: "Agent 2 status: ONLINE. Scraped 42 leads today."' }
+        { type: 'system', text: '[SYSTEM] Initializing WhatsApp Travel Agent...' },
+        { type: 'system', text: '[SYSTEM] Checking credentials & active WhatsApp session...' },
+        { type: 'success', text: '[SUCCESS] WhatsApp Cloud API webhook listener connected.' },
+        { type: 'info', text: '[LISTENING] Awaiting incoming travel requests (#plan)...' },
+        { type: 'incoming', text: '[INCOMING] Message from +91-98765-43210: "#plan Lucknow to Goa for 3 days budget 20k"' },
+        { type: 'processing', text: '[AI] Parsing request & compiling flight and hotel itineraries...' },
+        { type: 'outgoing', text: '[OUTGOING] Reply sent: "Your itinerary for Goa is ready! Estimated cost: ₹18,500. Flights checked..."' }
       ]
     },
-    scraper: {
-      title: '> LEAD_SCRAPER_BOT // IDLE',
+    startup: {
+      title: '> AI_STARTUP_AGENT // STANDBY',
+      label: 'AI Startup Agent',
       logs: [
-        { type: 'system', text: '[SYSTEM] Booting Lead Scraper Bot v1.2...' },
-        { type: 'info', text: '[CONFIG] Target Domain: https://news.ycombinator.com/' },
-        { type: 'info', text: '[CONFIG] Keywords to extract: "AI agent", "Automation"' },
-        { type: 'processing', text: '[SCRAPE] Sending request & fetching DOM trees...' },
-        { type: 'processing', text: '[PARSER] Parsing articles, titles, and links...' },
-        { type: 'success', text: '[DATA] Extracted 5 articles matching filters.' },
-        { type: 'info', text: '[EXPORT] Saving database payloads to ./leads_export.json...' },
-        { type: 'success', text: '[SUCCESS] Payload sent to webhook. Scraper idle.' }
+        { type: 'system', text: '[SYSTEM] Booting AI Startup Agent Blueprinting Engine...' },
+        { type: 'info', text: '[CONFIG] Analyzing target market: SaaS & AI Tools' },
+        { type: 'processing', text: '[CRUNCHBASE] Querying latest funding rounds and valuation multiples...' },
+        { type: 'processing', text: '[COMPETITORS] Analyzing competitor products and marketing strategies...' },
+        { type: 'success', text: '[SUCCESS] Generated 5-year financial model & pricing tiers.' },
+        { type: 'info', text: '[EXPORT] Compiling full slide deck & pitch deck to PDF...' },
+        { type: 'success', text: '[SUCCESS] Business blueprint ready for download.' }
       ]
     },
-    optimizer: {
-      title: '> WORKFLOW_LINKER // DEPLOYED',
+    helpdesk: {
+      title: '> SRMCEM_AI_HELPDESK // ONLINE',
+      label: 'SRMCEM AI Helpdesk',
       logs: [
-        { type: 'system', text: '[SYSTEM] Initializing Workflow Linker...' },
-        { type: 'info', text: '[TRIGGER] Event hook active: "Gmail - New incoming message"' },
-        { type: 'info', text: '[MAPPING] Linking triggers: Gmail -> Airtable DB -> Slack Alerts' },
-        { type: 'processing', text: '[SIMULATE] Injecting trigger event: email subject "Request for AI services"' },
-        { type: 'processing', text: '[WRITE] Appending parsed email columns into Airtable DB...' },
-        { type: 'success', text: '[AIRTABLE] Row appended. ID: recXyZ1234abc' },
-        { type: 'processing', text: '[POST] Forwarding alert hook payload to Slack channel #leads-alerts...' },
-        { type: 'success', text: '[SLACK] Message sent: "New Lead Added: Abhinav Verma (AI Agent Inquiry)"' },
-        { type: 'success', text: '[SUCCESS] Full automation workflow finished in 520ms.' }
+        { type: 'system', text: '[SYSTEM] Connecting SRMCEM College Knowledge base...' },
+        { type: 'info', text: '[VECTOR_DB] Indexing 1,200+ PDF documents (hostels, syllabus, fees)...' },
+        { type: 'success', text: '[SUCCESS] Semantic search index populated on Pinecone Vector Store.' },
+        { type: 'incoming', text: '[INCOMING] Student Query: "What is the fee structure for B.Tech CS?"' },
+        { type: 'processing', text: '[SEARCH] Performing vector search over college knowledge base...' },
+        { type: 'outgoing', text: '[OUTGOING] Reply sent: "B.Tech CS tuition fee is ₹1,12,000 per year. Exam fees..."' },
+        { type: 'success', text: '[SUCCESS] Answer streamed with 99.4% confidence score.' }
+      ]
+    },
+    twin: {
+      title: '> AI_DIGITAL_TWIN // STANDBY',
+      label: 'AI Digital Twin',
+      logs: [
+        { type: 'system', text: '[SYSTEM] Booting Abhinav Verma\'s AI Digital Twin...' },
+        { type: 'info', text: '[KNOWLEDGE] Loading professional CV, project history, and tech stack info...' },
+        { type: 'info', text: '[WIDGET] Live recruiter screening chat active.' },
+        { type: 'incoming', text: '[INCOMING] Recruiter Query: "Do you have experience with n8n and Python?"' },
+        { type: 'processing', text: '[TWIN] Generating response matching Abhinav\'s actual portfolio...' },
+        { type: 'outgoing', text: '[OUTGOING] Reply: "Yes! Abhinav builds advanced n8n workflows for data routing and OpenAI integrations..."' },
+        { type: 'success', text: '[SUCCESS] Recruiter screening chat logs parsed and saved.' }
       ]
     }
   };
@@ -67,7 +83,8 @@ export const AgentConsole: React.FC = () => {
 
     const printNextLine = () => {
       if (index < logs.length) {
-        setPrintedLogs(prev => [...prev, logs[index]]);
+        const nextLog = logs[index];
+        setPrintedLogs(prev => [...prev, nextLog]);
         index++;
         timer = setTimeout(printNextLine, 400 + Math.random() * 300);
       }
@@ -105,7 +122,7 @@ export const AgentConsole: React.FC = () => {
           Agent Controller
         </span>
         <div className="flex flex-col gap-3">
-          {(['whatsapp', 'scraper', 'optimizer'] as const).map(key => (
+          {(['whatsapp', 'startup', 'helpdesk', 'twin'] as const).map(key => (
             <button
               key={key}
               onClick={() => setActiveAgent(key)}
@@ -116,7 +133,7 @@ export const AgentConsole: React.FC = () => {
                   : 'border-neutral-800 text-neutral-400 bg-neutral-950/20 hover:border-neutral-700 hover:text-white'
               }`}
             >
-              <span>{key === 'whatsapp' ? 'WhatsApp Monitor' : key === 'scraper' ? 'Lead Scraper Bot' : 'Workflow Linker'}</span>
+              <span>{agents[key].label}</span>
               <span className="text-[10px] opacity-60">▶</span>
             </button>
           ))}
@@ -124,7 +141,7 @@ export const AgentConsole: React.FC = () => {
 
         <div className="mt-auto border-t border-neutral-900 pt-6 font-code text-[11px] text-neutral-500">
           <div>CPU LOAD: 2.4%</div>
-          <div className="mt-1">ACTIVE INSTANCES: 3</div>
+          <div className="mt-1">ACTIVE INSTANCES: 4</div>
         </div>
       </div>
 
@@ -135,7 +152,7 @@ export const AgentConsole: React.FC = () => {
           <span className="text-accent-cyan text-glow-cyan font-bold">
             {agents[activeAgent].title}
           </span>
-          <span className="text-accent-green text-[10px]">IDLE</span>
+          <span className="text-accent-green text-[10px]">ACTIVE</span>
         </div>
 
         {/* Console Screen logs list */}

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { AnimatedText } from '@/components/ui/animated-underline-text-one';
 
 export const BentoAbout: React.FC = () => {
-  const skills = ['Python', 'JavaScript', 'TypeScript', 'Prompt Engineering', 'LangChain', 'n8n', 'Make.com', 'Web Scraping', 'Local APIs'];
+  const skills = ['JavaScript', 'TypeScript', 'Prompt Engineering', 'LangChain', 'n8n', 'Make.com', 'Web Scraping', 'Local APIs'];
   
   return (
     <div className="w-full">
@@ -38,7 +38,7 @@ export const BentoAbout: React.FC = () => {
             </p>
           </div>
           <div className="mt-4 flex gap-2 font-code text-xs text-accent-cyan">
-            <span>[ python ]</span>
+            <span>[ javascript ]</span>
             <span>[ typescript ]</span>
           </div>
         </div>
@@ -61,26 +61,39 @@ export const BentoAbout: React.FC = () => {
           </div>
         </div>
 
-        {/* Box 4: Future learning path */}
-        <div className="glass glass-glow rounded-2xl p-8 md:col-span-2">
-          <div className="text-[10px] font-code text-neutral-500 tracking-[3px] uppercase mb-4">// Next Modules</div>
-          <h3 className="font-heading font-bold text-lg text-white mb-4">Eager to Learn & Master</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-400">
-            <div className="flex items-start gap-2">
-              <span className="text-accent-cyan mt-1">▶</span>
-              <span>Multi-agent orchestration engines (CrewAI, AutoGen) for distributed processing.</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-accent-cyan mt-1">▶</span>
-              <span>Advanced cloud workflow platforms (n8n self-hosted, Make API integrations).</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-accent-cyan mt-1">▶</span>
-              <span>Vector databases, semantic searching, and agentic memory synchronization.</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <span className="text-accent-cyan mt-1">▶</span>
-              <span>Commercial deployment models to provide automation agents as a service.</span>
+        {/* Box 4: Academic Background Timeline */}
+        <div className="glass glass-glow rounded-2xl p-8 md:col-span-2 flex flex-col justify-between">
+          <div>
+            <div className="text-[10px] font-code text-neutral-500 tracking-[3px] uppercase mb-4">// Academic Background</div>
+            <h3 className="font-heading font-bold text-lg text-white mb-6">Education</h3>
+            
+            <div className="space-y-6">
+              <div className="relative pl-6 border-l border-neutral-800">
+                <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-accent-cyan" />
+                <h4 className="text-sm font-semibold text-white">Bachelor of Technology (B.Tech)</h4>
+                <p className="text-xs text-neutral-400 mt-1">Shri Ramswaroop Memorial College of Engineering and Management (SRMCEM)</p>
+                <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-neutral-800 bg-neutral-950/40 text-neutral-400 rounded">
+                  AKTU Affiliated
+                </span>
+              </div>
+
+              <div className="relative pl-6 border-l border-neutral-800">
+                <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-accent-cyan" />
+                <h4 className="text-sm font-semibold text-white">Class XII (Senior Secondary)</h4>
+                <p className="text-xs text-neutral-400 mt-1">Central Academy Senior Secondary School</p>
+                <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-neutral-800 bg-neutral-950/40 text-neutral-400 rounded">
+                  CBSE Board
+                </span>
+              </div>
+
+              <div className="relative pl-6 border-l border-neutral-800">
+                <div className="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full bg-accent-cyan" />
+                <h4 className="text-sm font-semibold text-white">Class X (Secondary)</h4>
+                <p className="text-xs text-neutral-400 mt-1">Central Academy Senior Secondary School</p>
+                <span className="inline-block mt-2 px-2 py-0.5 text-[9px] font-mono tracking-wide uppercase border border-neutral-800 bg-neutral-950/40 text-neutral-400 rounded">
+                  CBSE Board
+                </span>
+              </div>
             </div>
           </div>
         </div>

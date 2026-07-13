@@ -75,9 +75,9 @@ export const CustomCursor: React.FC = () => {
         width: cursorType === 'hover' ? 70 : 20,
         height: cursorType === 'hover' ? 30 : 20,
         borderRadius: cursorType === 'hover' ? '15px' : '50%',
-        backgroundColor: cursorType === 'hover' ? 'rgba(0, 242, 254, 0.15)' : 'transparent',
+        backgroundColor: cursorType === 'hover' ? 'rgba(0, 242, 254, 0.15)' : 'rgba(0, 242, 254, 0)',
         border: cursorType === 'hover' ? '1px solid rgba(0, 242, 254, 0.6)' : '1px solid rgba(255, 255, 255, 0.4)',
-        boxShadow: cursorType === 'hover' ? '0 0 15px rgba(0, 242, 254, 0.3)' : 'none',
+        boxShadow: cursorType === 'hover' ? '0 0 15px rgba(0, 242, 254, 0.3)' : '0 0 0px rgba(0, 242, 254, 0)',
       }}
       transition={{ type: 'spring', stiffness: 500, damping: 28 }}
       className="hidden md:flex items-center justify-center font-code text-[9px] font-bold text-accent-cyan tracking-wider overflow-hidden"
